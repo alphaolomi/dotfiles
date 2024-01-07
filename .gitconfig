@@ -8,23 +8,6 @@
 	required = true
 	clean = git-lfs clean -- %f
 
-# [commit]
-	# gpgsign = true
-# [tag]
-	# forceSignAnnotated = true
-
-
-
-# .gitconfig but for work
-[includeIf "gitdir:~/Dev/Work/"]
-    path = ~/.gitconfig.work
-
-[core]
-	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.global-gitignore
-	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
-	whitespace = space-before-tab,indent-with-non-tab,trailing-space
-
 [alias]
     # Add file
     a = add
@@ -68,30 +51,10 @@
 	remote = origin
 	merge = refs/heads/master
 
-[apply]
-	# Detect whitespace errors when applying a patch
-	whitespace = fix
+# [apply]
+# 	# Detect whitespace errors when applying a patch
+# 	whitespace = fix
 
-[color]
-    # Use colors in Git commands that are capable of colored output when outputting to the terminal
-	ui = auto
-[color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
-
-[merge]
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true
 
 # URL shorthands
 [url "git@github.com:"]
